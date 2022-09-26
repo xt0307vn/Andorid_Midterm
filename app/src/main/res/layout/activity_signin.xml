@@ -35,13 +35,13 @@
             android:fontFamily="serif-monospace"
             android:text="Sign in"
             android:textColor="#3D6FB7"
-            android:textSize="35sp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/signin_boxInput"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_below="@+id/signin_txtSignin"
             android:gravity="center"
             android:orientation="vertical">
@@ -119,21 +119,24 @@
 
             </RelativeLayout>
 
+                <Button
+                    android:id="@+id/signin_btnSignin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_btnsignin"
+                    android:drawableRight="@drawable/ic_arrow_rightwhite"
+                    android:fontFamily="monospace"
+                    android:text="Sign in"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:paddingRight="101dp"
+                    android:paddingLeft="110dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="50dp"/>
 
-            <Button
-                android:id="@+id/signin_btnSignin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="100dp"
-                android:layout_marginRight="30dp"
-                android:background="@drawable/background_btnsignin"
-                android:fontFamily="monospace"
-                android:text="Sign in"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="25sp"
-                android:textStyle="bold" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -145,19 +148,19 @@
                     android:id="@+id/signin_question"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Don't have an account? "
-                    android:textSize="15sp"
-                    android:fontFamily="monospace"/>
+                    android:fontFamily="monospace"
+                    android:text="Don't have an account ? "
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/signin_question"
-                    android:text="Click here?"
-                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:text="Sign up"
                     android:textColor="#3D6FB7"
-                    android:textStyle="bold"
-                    android:fontFamily="monospace"/>
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
 
             </RelativeLayout>
