@@ -100,9 +100,9 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="monospace"
                     android:hint="Enter Password"
+                    android:inputType="textPassword"
                     android:textColor="#56C3B8"
-                    android:textColorHint="#94b8b8"
-                    android:inputType="textPassword"/>
+                    android:textColorHint="#94b8b8" />
             </LinearLayout>
 
             <RelativeLayout
@@ -120,23 +120,23 @@
 
             </RelativeLayout>
 
-                <Button
-                    android:id="@+id/signin_btnSignin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background_btnsignin"
-                    android:drawableRight="@drawable/ic_arrow_rightwhite"
-                    android:fontFamily="monospace"
-                    android:text="Sign in"
-                    android:textAllCaps="false"
-                    android:textColor="#fff"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:paddingRight="100dp"
-                    android:paddingLeft="100dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="50dp"/>
+            <Button
+                android:id="@+id/signin_btnSignin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/background_btnsignin"
+                android:drawableRight="@drawable/ic_arrow_rightwhite"
+                android:fontFamily="monospace"
+                android:paddingLeft="100dp"
+                android:paddingRight="100dp"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
 
             <RelativeLayout
