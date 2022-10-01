@@ -17,7 +17,7 @@
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".CourseDetailActivity"
             android:exported="false" />
         <activity
             android:name=".SigninActivity"
@@ -26,7 +26,7 @@
             android:name=".StartActivity"
             android:exported="false" />
         <activity
-            android:name=".LearndetailActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
