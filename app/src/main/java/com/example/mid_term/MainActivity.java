@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.item_list:
+                    case R.id.item_courses:
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_container, coursesFragment).commit();
                         return true;
                     case R.id.item_profile:
