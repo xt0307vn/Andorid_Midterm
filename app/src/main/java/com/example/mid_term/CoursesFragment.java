@@ -43,18 +43,16 @@ public class CoursesFragment extends Fragment {
 private List<Courses> getlist() {
     List<Courses> coursesList = new ArrayList<>();
     coursesList.add(new Courses("PHP", "aaaa", "aaaa", "PHP", "aaaa"));
-    coursesList.add(new Courses("JS", "aaaa", "aaaa", "JS", "aaaa"));
+    coursesList.add(new Courses("JavaScript", "aaaa", "aaaa", "JS", "aaaa"));
     coursesList.add(new Courses("HTML", "aaaa", "aaaa", "HTML", "aaaa"));
     coursesList.add(new Courses("Java", "aaaa", "aaaa", "Java", "aaaa"));
     coursesList.add(new Courses("Python", "aaaa", "aaaa", "PY", "aaaa"));
     coursesList.add(new Courses("SQL", "aaaa", "aaaa", "SQL", "aaaa"));
     coursesList.add(new Courses("CSS", "aaaa", "aaaa", "CSS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
-    coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
+    coursesList.add(new Courses("Bootstrap", "aaaa", "aaaa", "BS", "aaaa"));
+    coursesList.add(new Courses("Json", "aaaa", "aaaa", "Json", "aaaa"));
+    coursesList.add(new Courses("XML", "aaaa", "aaaa", "XML", "aaaa"));
+    coursesList.add(new Courses("MongoDB", "aaaa", "aaaa", "MDB", "aaaa"));
     coursesList.add(new Courses("ReacJS", "aaaa", "aaaa", "RJS", "aaaa"));
 
     return coursesList;

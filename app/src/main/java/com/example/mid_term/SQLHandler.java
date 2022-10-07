@@ -24,4 +24,9 @@ public class SQLHandler {
         String query = "select * from Users where user_name = '"+ user_name+"'";
         return conn.getData(query);
     }
+
+    public ResultSet getDataCourse(String course_title) {
+        String query = "select * from Courses where course_title = '"+ course_title+"'";
+        return conn.getData(query);
+    }
 }

@@ -1,6 +1,7 @@
 package com.example.mid_term;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,15 +47,17 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
         holder.course_name.setText(courses.getCourse_name());
         holder.course_title.setText(courses.getCourse_title());
 
-        holder.backgroundTitle.setBackgroundColor(Color.argb(255, 86, 195, 184));
+        holder.backgroundTitle.setBackgroundColor(Color.argb(255, 86, setColorGreen(), setColorBlue()));
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, holder.course_name.getText(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, CourseDetailActivity.class);
+                intent.putExtra("course_name", courses.getCourse_name());
+                intent.putExtra("course_title", courses.getCourse_title());
+                context.startActivity(intent);
             }
         });
-
     }
 
     @Override
@@ -86,12 +89,12 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
     }
     public int setColorGreen() {
         Random random = new Random();
-        int g = random.nextInt(255);
+        int g = random.nextInt(210 - 190 + 1)  + 190;
         return g;
     }
     public int setColorBlue() {
         Random random = new Random();
-        int b = random.nextInt(255);
+        int b = random.nextInt(210 - 190 + 1)  + 190;
         return b;
     }
 
