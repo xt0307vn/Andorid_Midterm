@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -19,12 +20,16 @@ public class MainActivity extends AppCompatActivity {
 
     CoursesFragment coursesFragment = new CoursesFragment();
     ProfileFragment profileFragment = new ProfileFragment();
+    String user_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Intent intent = getIntent();
+        Bundle bundle = intent.getBundleExtra("dataUser");
+        user_name = bundle.getString("user_name");
         bottomNavigationView = findViewById(R.id.main_navigationBar);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.main_container, coursesFragment).commit();
@@ -44,5 +49,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public String getUser_name() {
+        return user_name;
     }
 }

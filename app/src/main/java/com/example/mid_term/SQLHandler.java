@@ -19,4 +19,9 @@ public class SQLHandler {
         String query = "select * from Users";
         return conn.getData(query);
     }
+
+    public ResultSet getDataUser(String user_name) {
+        String query = "select * from Users where user_name = '"+ user_name+"'";
+        return conn.getData(query);
+    }
 }

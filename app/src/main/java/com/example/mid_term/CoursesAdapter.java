@@ -46,8 +46,7 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.CoursesV
         holder.course_name.setText(courses.getCourse_name());
         holder.course_title.setText(courses.getCourse_title());
 
-
-        holder.backgroundTitle.setBackgroundColor(Color.argb(255, setColorRed(), setColorBlue(), setColorGreen()));
+        holder.backgroundTitle.setBackgroundColor(Color.argb(255, 86, 195, 184));
 
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
