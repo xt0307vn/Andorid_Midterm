@@ -11,7 +11,7 @@ public class SQLHandler {
 
     public void isertUser(String user_name, String user_password, String user_firstname, String user_lastname, String user_phone, String user_email) {
         String query = "insert into Users\n" +
-                        "values ( '"+ user_name+"', '"+ user_password+"', '"+ user_firstname+"', '"+ user_lastname+"', '"+ user_phone+"', '"+ user_email+"')";
+                        "values ( '"+ user_name+"', '"+ user_password+"', N'"+ user_firstname+"', N'"+ user_lastname+"', '"+ user_phone+"', '"+ user_email+"')";
         conn.excute(query);
     }
 
@@ -25,8 +25,17 @@ public class SQLHandler {
         return conn.getData(query);
     }
 
+    public ResultSet checkSign(String user_name, String user_password) {
+        String query = "select * from Users where user_name = '"+ user_name+"' and user_password = '"+ user_password +"'";
+        return conn.getData(query);
+    }
+
     public ResultSet getDataCourse(String course_title) {
         String query = "select * from Courses where course_title = '"+ course_title+"'";
         return conn.getData(query);
     }
+
+
+
+
 }

@@ -23,15 +23,18 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         start_btnStart = findViewById(R.id.btn_getStarted);
-        start_btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
+
+        gotoSignin();
     }
 
     public void gotoSignin() {
-        Intent intent = new Intent(StartActivity.this, SigninActivity.class);
-        startActivity(intent);
+        start_btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, SigninActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

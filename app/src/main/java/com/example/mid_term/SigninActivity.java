@@ -39,8 +39,13 @@ public class SigninActivity extends AppCompatActivity {
                 getInput();
                 if(checkInput()) {
                     if(checkUser_name(user_name)) {
-                        showDialogOk("Sign in successfully");
-                        gototMain(user_name);
+                        if(checkUser_password(user_name, user_password)) {
+                            showDialogOk("Sign in successfully");
+                            gototMain(user_name);
+                        } else {
+                            showDialogOk("Password false");
+                        }
+
                     } else {
                         showDialogOk("Username not exists");
                     }
@@ -83,6 +88,18 @@ public class SigninActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        return false;
+    }
+
+    public boolean checkUser_password(String user_name, String user_password) {
+        try {
+            ResultSet rs =  rs = sqlHandler.checkSign(user_name, user_password);
+            while(rs.next()) {
+                    return true;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return false;
     }
 
